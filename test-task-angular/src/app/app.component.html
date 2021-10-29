@@ -1,1 +1,27 @@
-<router-outlet></router-outlet>
+<main class="layout">
+  <header class="layout__header">
+    <form class="layout__form" action="#!">
+      <button class="layout__btn list-btn">
+        Список
+      </button>
+    </form>
+
+    <form class="layout__form" action="#!">
+      <button class="layout__btn map-btn layout__btn_active">
+        Показать на карте
+      </button>
+    </form>
+  </header>
+  <company-list></company-list>
+</main>
+
+
+
+
+<!-- <ul>
+  <li *ngFor="let company of companies">
+    <img src={{company.logo}} alt="company logo">
+  <p>Название компании: {{company.suffix}} {{company.business_name}}</p>
+  <p>Возраст пользователя: {{company}}</p>
+  </li>
+</ul> -->

@@ -1,0 +1,52 @@
+.layout {
+
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+
+  // .layout__form
+
+  &__header {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  // .layout__form
+
+  &__form {
+  }
+
+  // .layout__btn
+
+  &__btn {
+    font-family: inherit;
+    font-size: 2rem;
+    background-color: rgb(227, 255, 253);
+    border: #312 1px solid;
+    border-radius: 4px;
+    font-weight: 500;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(82, 206, 117);
+    }
+
+    &_active {
+      background-color: rgb(119, 255, 158);
+      pointer-events: none;
+    }
+
+    &:active {
+      background-color: rgb(40, 118, 62)
+    }
+  }
+}
+
+.list-btn {
+  margin-right: 2rem;
+}
+
+.map-btn {
+
+}

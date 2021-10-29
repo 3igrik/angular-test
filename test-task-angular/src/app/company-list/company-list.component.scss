@@ -1,0 +1,73 @@
+.company-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.company-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.table {
+  text-decoration: none;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+
+  &__cell,
+  &__head {
+    white-space: pre-wrap;
+    padding: 20px 0.5rem;
+    line-height: 16px;
+    vertical-align: middle;
+    border: 2px solid #354251;
+  }
+
+  &__head {
+    font-weight: normal;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #108ee8;
+    min-height: 50px;
+    padding: 0;
+    min-height: 100%;
+
+    &-button {
+      width: 100%;
+      min-height: inherit;
+      padding: 20px 0.5rem;
+      border: transparent;
+      background-color: transparent;
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      position: relative;
+      cursor: pointer;
+
+      &_sort::after {
+        content: "🡻";
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 1rem;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__cell {
+    font-size: 16px;
+    color: #1c374a;
+  }
+
+  &__row:hover {
+    background-color:#d8e6e8;
+
+    & .table__cell {
+      color: #354251;
+      cursor: default;
+    }
+  }
+}

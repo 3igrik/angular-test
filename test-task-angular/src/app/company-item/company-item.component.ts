@@ -10,9 +10,22 @@ import { ICompanyData } from '../interfaces/ICompanyData';
 })
 
 export class CompanyItemComponent {
-  @Input() companyLogo: string = "";
-  @Input() companySuffix: string = "";
-  @Input() companyBusinessName: string = "";
-  @Input() companyIndustry: string = "";
-  @Input() companyType: string = "";
+  @Input() company: ICompanyData = {
+    id: 0,
+    uid: "",
+    business_name: "",
+    suffix: "",
+    industry: "",
+    catch_phrase: "",
+    buzzword: "",
+    bs_company_statement: "",
+    employee_identification_number: "",
+    duns_number: "",
+    logo: "",
+    type: "",
+    phone_number: "",
+    full_address: "",
+    latitude: 0,
+    longitude: 0
+  }
 }

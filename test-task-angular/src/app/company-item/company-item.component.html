@@ -3,15 +3,17 @@
 <td class="table__cell">{{companyIndustry}}</td>
 <td class="table__cell">{{companyType}}</td> -->
 
-<img class="company-logo" src={{companyLogo}} alt="Company logo">
+<a [routerLink]="['detail', company.id]" [queryParams]=company>
+  <img class="company-logo" src={{company.logo}} alt="Company logo" >
+</a>
 <div class="company-info">
   <p class="company-info__name">
-    Name: {{companySuffix}} {{companyBusinessName}}
+    Name: {{company.suffix}} {{company.business_name}}
   </p>
   <p class="company-info__industry">
-    Industry: {{companyIndustry}}
+    Industry: {{company.industry}}
   </p>
   <p class="company-info__type">
-    Type: {{companyType}}
+    Type: {{company.type}}
   </p>
 </div>

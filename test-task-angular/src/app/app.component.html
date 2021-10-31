@@ -1,18 +1,21 @@
 <main class="layout">
   <header class="layout__header">
-    <form class="layout__form" action="#!">
-      <button class="layout__btn list-btn">
+    <form class="layout__form" routerLink="">
+      <button
+      class="layout__btn list-btn"
+      routerLinkActive="layout__btn_active"
+      [routerLinkActiveOptions]="{exact:true}">
         Список
       </button>
     </form>
 
-    <form class="layout__form" action="#!">
-      <button class="layout__btn map-btn layout__btn_active">
+    <form class="layout__form" routerLink="/detail">
+      <button class="layout__btn map-btn" routerLinkActive="layout__btn_active">
         Показать на карте
       </button>
     </form>
   </header>
-  <company-list class="company-list"></company-list>
+  <router-outlet></router-outlet>
 </main>
 
 

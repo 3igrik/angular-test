@@ -5,6 +5,8 @@ import { HttpClientModule }   from '@angular/common/http';
 import { AppRoutingModule } from '../app-routing.module';
 import { AppComponent } from '../app.component';
 import { CompanyListComponent } from './compnay-list.component';
+import { CompanyItemComponent } from '../company-item/company-item.component';
+import { CompanyItemModule } from '../company-item/company-item.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,7 @@ import { CompanyListComponent } from './compnay-list.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    CompanyItemModule
   ],
   exports: [CompanyListComponent],
   providers: [],

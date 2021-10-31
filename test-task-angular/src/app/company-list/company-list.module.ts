@@ -4,8 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule }   from '@angular/common/http';
 import { AppRoutingModule } from '../app-routing.module';
 import { AppComponent } from '../app.component';
-import { CompanyListComponent } from './compnay-list.component';
-import { CompanyItemComponent } from '../company-item/company-item.component';
+import { CompanyListComponent } from './company-list.component';
 import { CompanyItemModule } from '../company-item/company-item.module';
 
 @NgModule({

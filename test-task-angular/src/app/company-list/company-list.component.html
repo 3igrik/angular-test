@@ -35,14 +35,11 @@
 </table> -->
 
 <main class="company-list">
+
   <company-item
   class="company-item"
   *ngFor="let company of companies"
-  [companyLogo]="company.logo"
-  [companyBusinessName]="company.business_name"
-  [companySuffix]="company.suffix"
-  [companyIndustry]="company.industry"
-  [companyType]="company.type"
+  [company]="company"
   >
 
   </company-item>

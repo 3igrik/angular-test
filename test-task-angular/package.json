@@ -21,6 +21,7 @@
     "@angular/router": "~12.2.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
+    "ymaps": "^0.2.1",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -33,7 +34,7 @@
     "@angular/cli": "~12.2.11",
     "@angular/compiler-cli": "~12.2.0",
     "@types/jasmine": "~3.8.0",
-    "@types/node": "^12.11.1",
+    "@types/node": "^12.20.36",
     "@typescript-eslint/eslint-plugin": "4.28.2",
     "@typescript-eslint/parser": "4.28.2",
     "eslint": "^7.26.0",

@@ -2,8 +2,8 @@ export interface ICompanyData {
   id: number;
   uid: string;
   business_name: string;
-  suffix: string,
-  industry: string,
+  suffix: string;
+  industry: string;
   catch_phrase: string;
   buzzword: string;
   bs_company_statement: string;
@@ -14,5 +14,5 @@ export interface ICompanyData {
   phone_number: string;
   full_address: string;
   latitude: number;
-  longitude: number
+  longitude: number;
 }

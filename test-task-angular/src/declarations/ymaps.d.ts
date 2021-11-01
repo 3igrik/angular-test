@@ -1,1 +1,1 @@
-declare module 'ymaps';
+declare module "ymaps";

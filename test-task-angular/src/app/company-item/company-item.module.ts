@@ -1,24 +1,22 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 
-import { HttpClientModule }   from '@angular/common/http';
-import { AppRoutingModule } from '../app-routing.module';
-import { AppComponent } from '../app.component';
-import { CompanyItemComponent } from './company-item.component';
-import { CompanyDetailModule } from '../company-detail/company-detail.module';
+import { HttpClientModule } from "@angular/common/http";
+import { AppRoutingModule } from "../app-routing.module";
+import { AppComponent } from "../app.component";
+import { CompanyItemComponent } from "./company-item.component";
+import { CompanyDetailModule } from "../company-detail/company-detail.module";
 
 @NgModule({
-  declarations: [
-    CompanyItemComponent
-  ],
+  declarations: [CompanyItemComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CompanyDetailModule
+    CompanyDetailModule,
   ],
   exports: [CompanyItemComponent],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class CompanyItemModule { }
+export class CompanyItemModule {}

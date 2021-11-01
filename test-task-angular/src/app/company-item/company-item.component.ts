@@ -1,14 +1,13 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input } from "@angular/core";
 import { HttpService } from "../http.service";
-import { ICompanyData } from '../interfaces/ICompanyData';
+import { ICompanyData } from "../interfaces/ICompanyData";
 
 @Component({
-  selector: 'company-item',
-  templateUrl: './company-item.component.html',
-  styleUrls: ['./company-item.component.scss'],
-  providers: [HttpService]
+  selector: "company-item",
+  templateUrl: "./company-item.component.html",
+  styleUrls: ["./company-item.component.scss"],
+  providers: [HttpService],
 })
-
 export class CompanyItemComponent {
   @Input() company: ICompanyData = {
     id: 0,
@@ -26,6 +25,6 @@ export class CompanyItemComponent {
     phone_number: "",
     full_address: "",
     latitude: 0,
-    longitude: 0
-  }
+    longitude: 0,
+  };
 }

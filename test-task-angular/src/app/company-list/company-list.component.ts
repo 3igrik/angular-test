@@ -18,4 +18,32 @@ export class CompanyListComponent implements OnInit {
       .getData()
       .subscribe((data: any) => (this.companies = data));
   }
+
+  onChanged(sortValue: "name" | "type" | "industry"){
+    this.sort(sortValue);
+    console.log(sortValue);
+  }
+
+  sort(sortBy: "name" | "type" | "industry") {
+    if (sortBy === "name") {
+      this.companies.sort((companyA, companyB) => {
+        let companyAfullName = companyA.suffix + companyA.business_name;
+        let companyBfullName = companyB.suffix + companyB.business_name;
+
+        if (companyAfullName < companyBfullName) {
+          return -1;
+        } else if (companyAfullName > companyBfullName) {
+          return 1;
+        } else return 0;
+      });
+    } else {
+      this.companies.sort((companyA, companyB) => {
+        if (companyA[sortBy] < companyB[sortBy]) {
+          return -1;
+        } else if (companyA.business_name > companyB.business_name) {
+          return 1;
+        } else return 0;
+      });
+    }
+  }
 }

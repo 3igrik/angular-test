@@ -1,0 +1,7 @@
+<label for="sort">Сортировать по </label>
+<select #sort name="company-sort" id="sort" (change)="change(sort.value)">
+  <option value="null" selected disabled>...</option>
+  <option value="name">названию</option>
+  <option value="type">типу</option>
+  <option value="industry">виду деятельности</option>
+</select>

@@ -6,6 +6,7 @@ import { AppRoutingModule } from "../app-routing.module";
 import { AppComponent } from "../app.component";
 import { CompanyListComponent } from "./company-list.component";
 import { CompanyItemModule } from "../company-item/company-item.module";
+import { CompanySortModule } from "../company-sort/company-sort.module";
 
 @NgModule({
   declarations: [CompanyListComponent],
@@ -14,6 +15,7 @@ import { CompanyItemModule } from "../company-item/company-item.module";
     AppRoutingModule,
     HttpClientModule,
     CompanyItemModule,
+    CompanySortModule
   ],
   exports: [CompanyListComponent],
   providers: [],

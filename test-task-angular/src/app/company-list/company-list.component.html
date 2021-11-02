@@ -35,6 +35,11 @@
 </table> -->
 
 <main class="company-list">
+  <div class="filter-sort">
+    <company-sort (onChanged)="onChanged($event)">
+
+    </company-sort>
+  </div>
 
   <company-item
   class="company-item"

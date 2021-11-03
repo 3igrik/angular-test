@@ -6,9 +6,7 @@ import { CompanySortComponent } from "./company-sort.component";
 
 @NgModule({
   declarations: [CompanySortComponent],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule],
   exports: [CompanySortComponent],
   providers: [],
   bootstrap: [AppComponent],

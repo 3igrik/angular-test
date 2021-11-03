@@ -21,25 +21,23 @@ export class CompanyListComponent implements OnInit {
     this.companyIndustries = [];
     this.companyTypes = [];
 
-    this.httpService
-      .getData()
-      .subscribe((data: any) => {
-        this.companies = data
-        this.companiesChangebleCopy = data;
-        this.COMPANIES = data;
+    this.httpService.getData().subscribe((data: any) => {
+      this.companies = data;
+      this.companiesChangebleCopy = data;
+      this.COMPANIES = data;
 
-        this.companies.map((company) => {
-          if (!this.companyIndustries.includes(company.industry)) {
-            this.companyIndustries.push(company.industry);
-          }
-          if (!this.companyTypes.includes(company.type)) {
-            this.companyTypes.push(company.type);
-          }
-        })
+      this.companies.map((company) => {
+        if (!this.companyIndustries.includes(company.industry)) {
+          this.companyIndustries.push(company.industry);
+        }
+        if (!this.companyTypes.includes(company.type)) {
+          this.companyTypes.push(company.type);
+        }
       });
+    });
   }
 
-  onChanged(sortValue: "name" | "type" | "industry"){
+  sortChanged(sortValue: "name" | "type" | "industry") {
     this.sort(sortValue);
     console.log(sortValue);
   }
@@ -75,18 +73,24 @@ export class CompanyListComponent implements OnInit {
     this.companiesChangebleCopy = this.COMPANIES;
 
     if (inputs.selectType !== null && inputs.selectType !== "null") {
-      this.companiesChangebleCopy = this.companiesChangebleCopy.filter(el => el.type === inputs.selectType)
+      this.companiesChangebleCopy = this.companiesChangebleCopy.filter(
+        (el) => el.type === inputs.selectType,
+      );
     }
 
     if (inputs.selectIndustry !== null && inputs.selectIndustry !== "null") {
-      this.companiesChangebleCopy = this.companiesChangebleCopy.filter(el => el.industry === inputs.selectIndustry)
+      this.companiesChangebleCopy = this.companiesChangebleCopy.filter(
+        (el) => el.industry === inputs.selectIndustry,
+      );
     }
 
     if (inputs.searchCompany !== null && inputs.searchCompany !== "") {
-      this.companiesChangebleCopy = this.companiesChangebleCopy.filter(el =>  {
+      this.companiesChangebleCopy = this.companiesChangebleCopy.filter((el) => {
         let fullName = `${el.suffix} ${el.business_name}`;
-        return fullName.toLowerCase().includes(inputs.searchCompany.toLowerCase());
-      })
+        return fullName
+          .toLowerCase()
+          .includes(inputs.searchCompany.toLowerCase());
+      });
     }
 
     this.companies = this.companiesChangebleCopy;

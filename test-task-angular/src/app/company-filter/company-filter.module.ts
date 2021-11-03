@@ -7,11 +7,7 @@ import { CompanyFilterComponent } from "./company-filter.component";
 
 @NgModule({
   declarations: [CompanyFilterComponent],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule],
   exports: [CompanyFilterComponent],
   providers: [],
   bootstrap: [AppComponent],

@@ -36,7 +36,7 @@
 
 <main class="company-list">
   <div class="filter-sort">
-    <company-sort (onChanged)="onChanged($event)">
+    <company-sort (sortChanged)="sortChanged($event)">
     </company-sort>
 
     <company-filter [companyIndustries]="companyIndustries" [companyTypes]="companyTypes" (filterCompany)="filterCompany($event)">

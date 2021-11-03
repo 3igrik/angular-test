@@ -17,18 +17,13 @@ export class CompanyFilterComponent {
   filterForm: FormGroup = new FormGroup({
     searchCompany: new FormControl(),
     selectType: new FormControl(),
-    selectIndustry: new FormControl()
+    selectIndustry: new FormControl(),
   });
 
   constructor() {
-    this.filterForm.valueChanges.subscribe(value => {
+    this.filterForm.valueChanges.subscribe((value) => {
       this.filterCompany.emit(value);
       console.log(value);
-    })
+    });
   }
-
-
-
-
-
 }

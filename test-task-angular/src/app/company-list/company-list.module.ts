@@ -17,7 +17,7 @@ import { CompanyFilterModule } from "../company-filter/company-filter.module";
     HttpClientModule,
     CompanyItemModule,
     CompanySortModule,
-    CompanyFilterModule
+    CompanyFilterModule,
   ],
   exports: [CompanyListComponent],
   providers: [],

@@ -1,0 +1,32 @@
+:host {
+}
+
+.type-checkboxes,
+.industry-checkboxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.filter-form {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column wrap;
+}
+
+
+
+.search-input {
+  height: 100%;
+}
+
+.search-input,
+.type-checkboxes-container {
+  margin-bottom: 10px;
+}
+
+.type-checkboxes-container__header,
+.industry-checkboxes-container__header {
+  font-size: 1rem;
+  margin: 0;
+  margin-bottom: 5px;
+}

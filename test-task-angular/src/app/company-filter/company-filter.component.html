@@ -1,0 +1,23 @@
+<form [formGroup]="filterForm" action="#!" class="filter-form">
+  <input type="text" placeholder="Поиск компании..." formControlName="searchCompany" class="search-input">
+
+  <div class="type-checkboxes-container">
+    <h5 class="type-checkboxes-container__header">Фильтр по типам:</h5>
+    <select class="type-checkboxes" formControlName="selectType">
+      <option value="null" selected>-</option>
+      <option *ngFor="let type of companyTypes" value={{type}}>
+        {{type}}
+      </option>
+    </select>
+  </div>
+
+  <div class="industry-checkboxes-container">
+    <h5 class="industry-checkboxes-container__header">Фильтр по видам деятельности:</h5>
+    <select class="industry-checkboxes" formControlName="selectIndustry">
+      <option value="null" selected>-</option>
+      <option *ngFor="let industry of companyIndustries" value={{industry}}>
+        {{industry}}
+      </option>
+    </select>
+  </div>
+</form>

@@ -7,6 +7,7 @@ import { AppComponent } from "../app.component";
 import { CompanyListComponent } from "./company-list.component";
 import { CompanyItemModule } from "../company-item/company-item.module";
 import { CompanySortModule } from "../company-sort/company-sort.module";
+import { CompanyFilterModule } from "../company-filter/company-filter.module";
 
 @NgModule({
   declarations: [CompanyListComponent],
@@ -15,7 +16,8 @@ import { CompanySortModule } from "../company-sort/company-sort.module";
     AppRoutingModule,
     HttpClientModule,
     CompanyItemModule,
-    CompanySortModule
+    CompanySortModule,
+    CompanyFilterModule
   ],
   exports: [CompanyListComponent],
   providers: [],
